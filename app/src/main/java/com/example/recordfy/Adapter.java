@@ -1,3 +1,5 @@
+package com.example.recordfy;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,26 +12,21 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<Item> {
-
-    public CustomAdapter(Context context, List<Item> items) {
-        super(context, 0, items);
+public class Adapter extends ArrayAdapter<String> {
+    public Adapter(Context context, List<String> items) {
+        super(context, android.R.layout.simple_list_item_1, items);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
         }
 
-        Item item = getItem(position);
-
-        TextView titleTextView = convertView.findViewById(R.id.title);
-        titleTextView.setText(item.getTitle());
-
-        TextView descriptionTextView = convertView.findViewById(R.id.description);
-        descriptionTextView.setText(item.getDescription());
+        String item = getItem(position);
+        TextView tvItem = convertView.findViewById(android.R.id.text1);
+        tvItem.setText(item);
 
         return convertView;
     }

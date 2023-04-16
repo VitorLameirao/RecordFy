@@ -11,6 +11,7 @@ import android.view.View;
 import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -46,6 +47,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_telainicial) {
+            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_content_main);
+            navHostFragment.getNavController().navigate(R.id.FirstFragment);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 
 
     @Override
