@@ -2,9 +2,12 @@
     <string name="app_name">RecordFy</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
+    <string name="first_fragment_label">Tela Inicial</string>
+    <string name="second_fragment_label">Registros</string>
+    <string name="btn_Registros">Registros</string>
+    <string name="msg_Bv">Seja bem-vindo ao RecordFy!\n
+    Seu APP de multimídias
+    </string>
     <string name="previous">Previous</string>
 
     <string name="lorem_ipsum">
