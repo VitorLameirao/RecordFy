@@ -12,9 +12,9 @@
         android:padding="16dp">
 
         <ListView
-            android:id="@+id/list_view"
+            android:id="@+id/list_view_fragment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:background="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
