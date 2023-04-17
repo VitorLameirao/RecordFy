@@ -52,7 +52,7 @@ public class Adapter extends BaseAdapter {
         ImageView music_image = listMusicView.findViewById(R.id.img_music);
         music_title.setText(musicModel.getMusic_title());
         music_author.setText(musicModel.getMusic_author());
-//        music_image.setImageResource(musicModel.getMusic_image());
+        music_image.setImageResource(musicModel.getMusic_image());
         return listMusicView;
     }
 }

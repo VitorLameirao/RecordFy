@@ -4,9 +4,9 @@ public class MusicModel {
     private String music_title;
     private String music_author;
     private int music_image;
-    private String music_audio;
+    private int music_audio;
 
-    public MusicModel(String music_author, String music_title, int music_image, String music_audio) {
+    public MusicModel(String music_author, String music_title, int music_image, int music_audio) {
         this.music_author = music_author;
         this.music_title = music_title;
         this.music_image = music_image;
@@ -38,11 +38,11 @@ public class MusicModel {
         this.music_title = music_title;
     }
 
-    public String getMusic_audio() {
+    public int getMusic_audio() {
         return music_audio;
     }
 
-    public void setMusic_audio(String music_audio) {
+    public void setMusic_audio(int music_audio) {
         this.music_audio = music_audio;
     }
 }
